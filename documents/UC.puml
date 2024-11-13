@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+
+actor Usuario
+
+' Casos de uso para a classe SistemaCadastro
+rectangle {
+    ' Casos de uso para a classe Pessoa
+    usecase CalcularIMC as "Calcular IMC"
+    usecase VerificarAlerta as "Verificar Alerta"
+
+    usecase Login as "Login"
+    usecase CadastrarPessoa as "Cadastrar Pessoa"
+    usecase ListarPessoas as "Listar Pessoas"
+}
+
+Usuario --> CalcularIMC
+Usuario --> VerificarAlerta
+
+Usuario --> Login
+Usuario --> CadastrarPessoa
+Usuario --> ListarPessoas
+
+@enduml
