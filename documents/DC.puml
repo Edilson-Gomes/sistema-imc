@@ -1,0 +1,31 @@
+@startuml
+
+' Definindo a classe Pessoa
+class Pessoa {
+    - nome: string
+    - idade: int
+    - peso: float
+    - altura: float
+    - email: string
+    - telefone: string
+    - imc: float
+    - alerta_gerado: bool
+    + __init__(nome: string, idade: int, peso: float, altura: float, email: string = None, telefone: string = None)
+    + calcular_imc(): float
+    + verificar_alerta(): bool
+}
+
+' Definindo a classe SistemaCadastro
+class SistemaCadastro {
+    - pessoas: list<Pessoa>
+    - logged_in: bool
+    + __init__()
+    + login(username: string, password: string)
+    + cadastrar_pessoa(nome: string, idade: int, peso: float, altura: float, email: string = None, telefone: string = None)
+    + listar_pessoas()
+}
+
+' Relacionamento entre SistemaCadastro e Pessoa
+SistemaCadastro "1" *-- "0..*" Pessoa : cadastra
+
+@enduml

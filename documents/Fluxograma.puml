@@ -1,0 +1,22 @@
+@startuml
+
+start
+
+:Login;
+if (Login bem-sucedido?) then (sim)
+  :Cadastrar Pessoa;
+  :Calcular IMC;
+  if (IMC fora da faixa saudável?) then (sim)
+    :Gerar Alerta;
+  else (não)
+    :Não gerar Alerta;
+  endif
+  :Pessoa Cadastrada;
+  :Listar Pessoas;
+else (não)
+  :Login falhou;
+endif
+
+stop
+
+@enduml
