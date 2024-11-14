@@ -13,7 +13,7 @@ class Pessoa:
 
     def calcular_imc(self):
         return self.peso / (self.altura ** 2)
-
+    
     def verificar_alerta(self):
         # Faixa de IMC saudável, segundo a OMS
         if self.imc < 18.5 or self.imc > 24.9:

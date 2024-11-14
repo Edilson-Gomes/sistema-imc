@@ -28,3 +28,13 @@ class SistemaCadastro:
     def listar_pessoas(self):
         for pessoa in self.pessoas:
             print(f"Nome: {pessoa.nome}, IMC: {pessoa.imc:.2f}, Alerta: {pessoa.alerta_gerado}")
+    
+    def imc(self, peso, altura):
+        imc = (peso / (altura ** 2))
+        print(f'{imc:.2f}')
+        if imc < 18.5:
+            print("Atenção seu IMC esta baixo!")
+        elif imc > 24.9:
+            print("Atenção seu IMC esta alto!")
+        else:
+            print("Seu IMC está regular.")
