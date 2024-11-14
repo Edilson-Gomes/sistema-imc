@@ -4,7 +4,7 @@ from classes.sistemacadastro import SistemaCadastro
 def main():
     sistema = SistemaCadastro()
 
-    # Realizando login
+    # Realizando login ("admin", "1234")
     sistema.login("admin", "1234")
 
     # Cadastrando pessoas
